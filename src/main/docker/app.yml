@@ -1,0 +1,26 @@
+version: '2'
+services:
+  resultsmigrationtest-app:
+    image: resultsmigrationtest
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATA_CASSANDRA_CONTACTPOINTS=resultsmigrationtest-cassandra
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8080:8080
+  resultsmigrationtest-cassandra:
+    extends:
+      file: cassandra-cluster.yml
+      service: resultsmigrationtest-cassandra
+  resultsmigrationtest-cassandra-node:
+    image: cassandra:3.11.5
+    environment:
+      - CASSANDRA_SEEDS=resultsmigrationtest-cassandra
+  resultsmigrationtest-cassandra-migration:
+    extends:
+      file: cassandra-migration.yml
+      service: resultsmigrationtest-cassandra-migration
+    environment:
+      - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql
