@@ -1,0 +1,16 @@
+entity Results {
+assertionName String
+criticality String
+dateTimeCreated String
+description String
+eventDataFileName String
+eventEventFileName String
+id String
+metadata String
+passing Boolean
+qfExecutionId String
+ruleID String
+ruleName String
+batchId String
+runId String
+}
