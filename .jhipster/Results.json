@@ -1,0 +1,68 @@
+{
+    "name": "Results",
+    "fields": [
+        {
+            "fieldName": "assertionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "criticality",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateTimeCreated",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eventDataFileName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eventEventFileName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "metadata",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "passing",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "qfExecutionId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ruleID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ruleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "batchId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "runId",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200107223013",
+    "entityTableName": "results",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
